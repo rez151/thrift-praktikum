@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="04abec2b-2b45-4832-b8c9-9bd51cd027d0" name="primary" url="http://192.168.162.128">
+        <fileTransfer host="192.168.162.128" port="22" rootFolder="/home/hfu/praktikum" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
