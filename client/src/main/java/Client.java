@@ -11,7 +11,7 @@ public class Client {
     private ThriftService.Client client;
 
 
-    public Client(String ip, int port) {
+    private Client(String ip, int port) {
         transport = new TSocket("192.168.162.128", 4711);
         TProtocol protocol = new TBinaryProtocol(transport);
         client = new ThriftService.Client(protocol);
@@ -44,8 +44,11 @@ public class Client {
 
         easyThriftClient.open();
 
-        int add = easyThriftClient.add(1, 3);
-        int multiply = easyThriftClient.multiply(10, 3);
+        int zahl1 = 11;
+        int zahl2 = 5;
+
+        int add = easyThriftClient.add(zahl1, zahl2);
+        int multiply = easyThriftClient.multiply(zahl1, zahl2);
 
         System.out.println("add: " + add);
         System.out.println("multiply: " + multiply);
