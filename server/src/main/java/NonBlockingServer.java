@@ -5,15 +5,21 @@ import org.apache.thrift.transport.TNonblockingServerTransport;
 import org.apache.thrift.transport.TTransportException;
 
 
-
-public class NonBlockingServer
-{
+public class NonBlockingServer {
 
     private TServer server;
     private int port;
 
     public static void main(String[] argus) throws TTransportException {
-        int port = 4711;
+        int port;
+
+        try {
+            port = Integer.parseInt(argus[0]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("using standardport on 4712");
+            port = 4712;
+        }
+
         NonBlockingServer nonBlockServer = new NonBlockingServer(port);
         nonBlockServer.start();
     }

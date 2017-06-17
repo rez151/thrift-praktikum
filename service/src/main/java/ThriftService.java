@@ -253,6 +253,7 @@ public class ThriftService {
 
   }
 
+  @SuppressWarnings("Since15")
   public static class add_args implements org.apache.thrift.TBase<add_args, add_args._Fields>, java.io.Serializable, Cloneable   {
     private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("add_args");
 
